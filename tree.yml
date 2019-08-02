@@ -3,7 +3,5 @@
   become: yes
   task: 
   - name: tree software
-    apt:
-     name: 
-     state: present
+    state: present
     
