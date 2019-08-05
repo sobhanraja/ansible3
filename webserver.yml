@@ -8,7 +8,7 @@
       state: present
     when: ansible_os_family =="Debian"
   
-  - nane: starting  apache2 server
+  - name: starting  apache2 server
     service:
       name: apache2
       state: started
@@ -20,7 +20,7 @@
       state: present
     when: ansible_os_family =="RedHat"  
  
-  - nane: starting httpd server
+  - name: starting httpd server
     service:
       name: httpd
       state: started
