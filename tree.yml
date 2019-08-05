@@ -1,7 +1,14 @@
 ---
 - hosts: all
   become: yes
-  task: 
-  - name: tree software
-    state: present
+  tasks: 
+  - name: ubuntu tree software
+    apt:
+     name: tree  
+     state: present
+ 
+  - name: amazon tree software
+    yum:
+     name: tree    
+     state: present
     
