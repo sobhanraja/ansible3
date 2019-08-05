@@ -6,9 +6,10 @@
     apt:
      name: tree  
      state: present
- 
+    when: ansible_os_family =="Debian"
   - name: amazon tree software
-    yum:
+    yum: 
      name: tree    
      state: present
-    
+    when: ansible_os_family =="RedHat"
+      
