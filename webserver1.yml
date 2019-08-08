@@ -2,7 +2,6 @@
 - hosts: webserver
   become: yes
   tasks:
-
 - name: installing apache2 server on ubuntu
   apt:
     name: apache2
