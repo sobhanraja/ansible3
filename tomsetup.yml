@@ -1,0 +1,5 @@
+---
+- hosts: webserver
+  become: yes
+  roles:
+    - {role: tomcatroll, when: ansible_os_family=="Debian"}
