@@ -1,0 +1,18 @@
+---
+- hosts: webserver
+  become: yes
+  gather_facts: yes
+  tasks: 
+  - name: install java8 on ubuntu
+    apt:
+      name: "{{javaonubuntu}}"
+      state: present
+    when: ansible_os_family =="Debian"
+ 
+  - name: install java8 on RedHat
+    yum:
+      name: "{{javaonredhat}}"
+      state: present
+    when: ansible_os_family =="RedHat"
+  
+
