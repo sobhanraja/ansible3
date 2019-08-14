@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: webserver
   become: yes
   gather_facts: yes
   tasks: 
@@ -17,9 +17,10 @@
     yum:
       name: "{{webserverforRedHat}}"
       state: present
-    when: ansibible_os_family =="redHat"
+    when: ansibible_os_family =="RedHat"
   - name: start the webserver
-    yum: 
+    service: 
       name: "{{webserverforRedHat}}"
       state: started
-    when: ansible_os_family =="redHat"  
+    when: ansible_os_family =="RedHat"  
+
