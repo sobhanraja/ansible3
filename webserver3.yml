@@ -17,7 +17,7 @@
     yum:
       name: "{{webserverforredhat}}"
       state: present
-    when: ansibible_os_family =="RedHat"
+    when: ansible_os_family =="RedHat"
   - name: start the webserver
     service: 
       name: "{{webserverforredhat}}"
